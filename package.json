@@ -1,0 +1,43 @@
+{
+  "name": "@kevinastone/debounce",
+  "version": "0.1.1",
+  "main": "dist/index.js",
+  "types": "dist/index",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinastone/debounce"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.dist.json",
+    "clean": "rimraf dist",
+    "format": "prettier --write '{tests,src}/**/*.{js,jsx,ts,tsx}'",
+    "lint:tsc": "tsc",
+    "lint:eslint": "pnp-eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "yarn run lint:tsc && yarn run lint:eslint",
+    "prepare": "npm run clean && npm run build",
+    "test": "jest"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "@kevinastone/eslint-config/base"
+    ]
+  },
+  "devDependencies": {
+    "@kevinastone/eslint-config": "^0.2.2",
+    "@types/jest": "^25.2.1",
+    "eslint": "^6.8.0",
+    "jest": "^25.2.7",
+    "jest-matcher-utils": "^25.2.7",
+    "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8"
+  }
+}
