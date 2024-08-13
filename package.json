@@ -1,6 +1,6 @@
 {
   "name": "@kevinastone/debounce",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "main": "dist/index.js",
   "types": "dist/index",
   "license": "MIT",

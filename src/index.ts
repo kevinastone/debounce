@@ -11,7 +11,7 @@ export default <
 ): ((...args: TArgs) => Promise<TReturn>) => {
   let latest: any;
 
-  return async (...args: TArgs) => {
+  return (...args: TArgs) => {
     return new Promise<TReturn>((resolve, reject) => {
       latest = resolve;
       setTimeout(() => {
